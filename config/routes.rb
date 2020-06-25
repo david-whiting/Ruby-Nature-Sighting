@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :users
 root :to => "static#home"
+
+resources :users, :only => [:new, :create] 
 resources :sights
 
 get "/:page" => "static#show"
 
 end
-
