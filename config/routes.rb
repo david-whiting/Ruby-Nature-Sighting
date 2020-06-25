@@ -7,6 +7,7 @@ get '/logout' => "sessions#destroy"
 
 resources :users, :only => [:new, :create] 
 resources :sights
+resources :categories
 
 get "/:page" => "static#show"
 end
