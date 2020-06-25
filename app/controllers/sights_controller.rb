@@ -21,6 +21,7 @@ class SightsController < ApplicationController
 		flash[:success] = "Your sighting was sucessfully created!"
 		redirect_to sight_url(@sight)
 	  else
+	  	flash[:danger] = "Please try again"
 		@sights = Sight.all
 		render :new
 		#render :index
