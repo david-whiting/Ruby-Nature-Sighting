@@ -1,8 +1,16 @@
 <h1><%= @sight.title %></h1>
 <p><%= @sight.content %></p>
 
+<b>Categories:</b>
+<ul>
+  <% @sight.categories.each do |category| %>
+    <li><%= category.name %></li>
+  <% end %>
+</ul>
+
 
 <%= link_to "Index", "/sights" %>
 <a href="/sights/<%= @sight.id %>/edit">Edit</a>
 
 <%= button_to "delete", sight_path(:id => @sight), :method => :delete %>
+

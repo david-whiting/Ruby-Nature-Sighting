@@ -1,7 +1,3 @@
-<h3>What did you see?</h3>
+<h3>New sightings: What did you see?</h3>
+<%= render 'form' %>
 
-<%= form_for(@sight) do |f| %>
-  <%= f.text_field :title, :placeholder => ("Few words of desciption") %><BR>
-  <%= f.text_area :content, :placeholder => ("More details") %><BR>
-  <%= f.submit "Submit" %>
-<% end %>
