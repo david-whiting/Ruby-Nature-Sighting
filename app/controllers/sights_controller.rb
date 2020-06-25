@@ -1,4 +1,5 @@
 class SightsController < ApplicationController
+	before_action :authentication_required 
 
 	def index
 		#if you're not logged in, you can't see this. Go back to the login page.
