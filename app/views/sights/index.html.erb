@@ -1,0 +1,10 @@
+<h1>Sightings</h1>
+
+<% @sights.each do |sight| %>
+  <div><%= link_to sight.title, sight_path(sight) %></div>
+<% end %>
+
+<BR>
+<%= link_to "Home", "/home" %>
+<%= link_to "About", "/about" %>
+<%= link_to "New", "sights/new" %><BR>

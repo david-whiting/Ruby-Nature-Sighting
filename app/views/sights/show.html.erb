@@ -1,0 +1,8 @@
+<h1><%= @sight.title %></h1>
+<p><%= @sight.content %></p>
+
+
+<%= link_to "Index", "/sights" %>
+<a href="/sights/<%= @sight.id %>/edit">Edit</a>
+
+<%= button_to "delete", sight_path(:id => @sight), :method => :delete %>
