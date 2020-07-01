@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :birds, dependent: :destroy
+  has_many :sights, dependent: :destroy
   has_secure_password
 
   validates :email, :presence => true

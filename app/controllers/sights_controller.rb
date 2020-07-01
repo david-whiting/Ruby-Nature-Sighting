@@ -2,8 +2,11 @@ class SightsController < ApplicationController
 	before_action :authentication_required 
 
 	def index
-		#if you're not logged in, you can't see this. Go back to the login page.
-	  @sights = Sight.all
+	  if params[:user_id]
+        @sights = User.find(params[:user_id]).sights
+      else
+	  	@sights = Sight.all
+	  end
 	end
 
 	def show
@@ -15,7 +18,7 @@ class SightsController < ApplicationController
   	end
 
 	def create
-  	@sight = Sight.new(sight_params)
+  	@sight = current_user.sights.build(sight_params)
 
 	  if @sight.save
 		flash[:success] = "Your sighting was sucessfully created!"
@@ -23,7 +26,7 @@ class SightsController < ApplicationController
 	  else
 	  	flash[:danger] = "Please try again"
 		@sights = Sight.all
-		render :new
+		render :index
 		#render :index
 	  end
 	end

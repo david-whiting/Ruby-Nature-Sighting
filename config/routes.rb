@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
-root :to => "static#home"
+	root :to => "static#home"
 
-get '/login' => "sessions#new"
-post '/sessions' => "sessions#create"
-get '/logout' => "sessions#destroy"
+	get '/login' => "sessions#new"
+	post '/sessions' => "sessions#create"
+	get '/logout' => "sessions#destroy"
 
-resources :users, :only => [:new, :create] 
-resources :sights
-resources :categories
+	resources :sights
+	resources :categories
+	resources :users do
+		resources :sights, only: [:show, :index]
+	end
 
-get "/:page" => "static#show"
+	get "/:page" => "static#show"
 end
+
