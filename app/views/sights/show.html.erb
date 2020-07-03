@@ -8,6 +8,10 @@
   <% end %>
 </ul>
 
+<h4>Author</h4>
+<p><%= @sight.user.name %></p>
+
+
 
 <%= link_to "Index", "/sights" %>
 <a href="/sights/<%= @sight.id %>/edit">Edit</a>

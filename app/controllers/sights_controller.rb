@@ -1,13 +1,15 @@
 class SightsController < ApplicationController
-	before_action :authentication_required 
+	before_action :authentication_required
 
 	def index
-	  if params[:user_id]
+      if params[:user_id]
         @sights = User.find(params[:user_id]).sights
+      elsif params[:category_name]
+      	@birds = Bird.search_category(params[:category_name])
       else
-	  	@sights = Sight.all
-	  end
-	end
+        @sights = Sight.all
+      end
+    end
 
 	def show
       @sight = Sight.find(params[:id])
@@ -15,20 +17,19 @@ class SightsController < ApplicationController
 
   	def new
       @sight = Sight.new
+      #@bird.build_category
   	end
 
 	def create
-  	@sight = current_user.sights.build(sight_params)
-
-	  if @sight.save
-		flash[:success] = "Your sighting was sucessfully created!"
-		redirect_to sight_url(@sight)
-	  else
-	  	flash[:danger] = "Please try again"
-		@sights = Sight.all
-		render :index
-		#render :index
-	  end
+	  @sight = current_user.sights.build(sight_params)
+		if @sight.save
+			flash[:success] = "Your sighting was sucessfully created!"
+		  	redirect_to sight_url(@sight)
+	  	else
+	  	 	flash[:danger] = "Please try again"
+			@sights = Sight.all
+			render :index
+		end
 	end
 
 	def edit
@@ -37,9 +38,8 @@ class SightsController < ApplicationController
 
 	def update
 	  @sight = Sight.find(params[:id])
-      if @sight.update(sight_params)
-      	  flash[:success] = "Your sighting was sucessfully updated!"
-       	  #validations -- render keeps @post info/error messages vs. redirect
+	  if @sight.update(sight_params)
+		  flash[:success] = "Your sighting was sucessfully updated!"
 	      redirect_to sight_path(@sight)
 	  else
 	  	render :edit

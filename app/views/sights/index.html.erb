@@ -1,13 +1,18 @@
 <h1>Sightings</h1>
 
+<div id="sights">
 <% @sights.each do |sight| %>
-  <div><%= link_to sight.title, sight_path(sight) %></div>
+<div class="sight">
+  <%= link_to sight.title, sight_path(sight) %>,
+  posted by: <%= link_to sight.user.name, user_sights_path(sight.user) %>
+  </div>
 <% end %>
+</div><BR>
 
 <BR>
 <%= link_to "Home", "/home" %>
 <%= link_to "About", "/about" %>
-<%= link_to "New", "sights/new" %><BR>
+<%= link_to "New", "/sights/new" %><BR>
 <p>You're logged in as: <%= current_user.name %></p>
 <%= link_to "Logout", logout_path %>
 

@@ -1,0 +1,13 @@
+<p>category index</p><BR>
+
+
+<p>how do I get the sight titles now?</p>
+
+<p style="font-weight: bold">The category you chose:</p>
+
+<%= @searched_category.name %>
+
+
+<% @searched_category.sights.each do |sight| %>
+<%= sight %>
+<% end %>
