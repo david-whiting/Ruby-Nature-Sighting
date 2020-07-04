@@ -4,8 +4,16 @@
 <% @sights.each do |sight| %>
 <div class="sight">
   <%= link_to sight.title, sight_path(sight) %>,
-  posted by: <%= link_to sight.user.name, user_sights_path(sight.user) %>,
-  	category id: <%= sight.category_ids %>
+  posted by: <%= link_to sight.user.name, 
+  user_sights_path(sight.user) %>,
+  category:
+
+    <% ids = sight.category_ids %>
+    <% categories = Category.find(ids) %>
+    <% categories.each do |category| %>
+    <%= category.name %>
+    <% end %>
+
   </div>
 <% end %>
 </div><BR>
