@@ -13,5 +13,6 @@ Rails.application.routes.draw do
 	end
 
 	get "/:page" => "static#show"
+	get '/auth/:provider/callback' => 'sessions#omniauth'
 end
 
