@@ -12,10 +12,9 @@
 <p><%= @sight.user.name %></p>
 
 
-
+<% if @sight.user == current_user %>
 <%= link_to "Index", "/sights" %>
-<a href="/sights/<%= @sight.id %>/edit">Edit</a>
-
+<a href="/sights/<%= @sight.id %>/edit">Edit</a><BR>
 <%= button_to "delete", sight_path(:id => @sight), :method => :delete %>
-
+<% end %>
 

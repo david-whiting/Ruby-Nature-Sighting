@@ -5,7 +5,7 @@ class SightsController < ApplicationController
       if params[:user_id]
         @sights = User.find(params[:user_id]).sights
       elsif params[:category_name]
-      	@birds = Bird.search_category(params[:category_name])
+      	@sights = Sight.search_category(params[:category_name])
       else
         @sights = Sight.all
       end

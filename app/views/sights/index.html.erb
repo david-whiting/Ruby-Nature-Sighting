@@ -4,10 +4,20 @@
 <% @sights.each do |sight| %>
 <div class="sight">
   <%= link_to sight.title, sight_path(sight) %>,
-  posted by: <%= link_to sight.user.name, user_sights_path(sight.user) %>
+  posted by: <%= link_to sight.user.name, user_sights_path(sight.user) %>,
+  	category id: <%= sight.category_ids %>
   </div>
 <% end %>
 </div><BR>
+
+<h4>See sights by category: Air, Land, Water, Other</h4>
+
+<%= form_tag("/sights", method: "get") do %>
+<%= label_tag(:category_name, "Which category?") %>
+  <%= text_field_tag(:category_name) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
 
 <BR>
 <%= link_to "Home", "/home" %>
