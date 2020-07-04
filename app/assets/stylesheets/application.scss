@@ -14,8 +14,10 @@
  *= require_self
  */
 
-@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+@import "bootstrap";
+
 * { font-family: sans-serif; }
 
  .field_with_errors input[type='text']{
-   border: 3px solid red; }
+   border: 3px solid red;
+ }

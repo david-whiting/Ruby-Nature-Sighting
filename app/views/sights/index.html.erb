@@ -1,5 +1,7 @@
 <h1>Sightings</h1>
 
+
+<div class="container text-center">
 <div id="sights">
 <% @sights.each do |sight| %>
 <div class="sight">
@@ -25,7 +27,7 @@
   <%= text_field_tag(:category_name) %>
   <%= submit_tag("Search") %>
 <% end %>
-
+</div>
 
 <BR>
 <%= link_to "Home", "/home" %>

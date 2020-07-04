@@ -26,6 +26,8 @@ gem 'omniauth', '~> 1.6', '>= 1.6.1'
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.5'
 gem 'pry', '~> 0.13.1'
 gem 'omniauth-facebook', '~> 4.0'
+gem 'bootstrap', '~> 4.0'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
