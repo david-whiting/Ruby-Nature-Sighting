@@ -2,6 +2,7 @@ class User < ApplicationRecord
   has_many :sights, dependent: :destroy
   has_secure_password
 
+  validates :name, presence: true, length: { minimum: 2 }
   validates :email, presence: true, uniqueness: true, length: { minimum: 6 }, format: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
   validates :password, presence: true
 

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 	resources :categories
 	
 	resources :users do
-		resources :sights, only: [:show, :index]
+		resources :sights, only: [:show, :index, :new]
 	end
 
 	get "/:page" => "static#show"

@@ -1,3 +1,4 @@
+<div class="container"><BR>
 <h1>Login</h1>
 <%= form_tag(sessions_path) do %>
   <%= text_field_tag :name, '', :placeholder => "Name" %>
@@ -6,5 +7,18 @@
   <%= submit_tag %>
 <% end %><BR>
 
-<%= link_to "Back to home", "/" %>
-
+<%= link_to "Back", :back, 
+    :style => 
+    "background-color: #A3B85E;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 8px 4px;
+    padding: 4px 20px;
+    cursor: pointer;" %>
+</div>

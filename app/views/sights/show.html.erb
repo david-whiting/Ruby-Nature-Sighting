@@ -14,18 +14,33 @@
       <p><%= @sight.content %></p>
 
 <b>Categories:</b>
-<ul>
-  <% @sight.categories.each do |category| %>
-    <li><%= category.name %></li>
-  <% end %>
-</ul>
+<ul style="list-style-type: none; padding: 0; margin: 0;">
+      <% @sight.categories.each do |category| %>
+        <li><%= category.name %></li>
+      <% end %>
+    </ul><BR>
 
 <b>Author</b>
 <p><%= @sight.user.name %></p>
+<%= link_to "Back", :back%><BR><BR>
 
 <% if @sight.user == current_user %>
-<a href="/sights/<%= @sight.id %>/edit">Edit</a><BR>
-<%= button_to "delete", sight_path(:id => @sight), :method => :delete %>
+  <a href="/sights/<%= @sight.id %>/edit" class="w7-button">Edit</a>
+  <%= button_to "delete", sight_path(:id => @sight), :method => :delete, 
+    data: {confirm: "Are you sure you want to delete?"}, 
+    :style => 
+    "background-color: #A3B85E;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 8px 4px;
+    padding: 4px 20px;
+    cursor: pointer;" %>
 <% end %>
 
 </div>
