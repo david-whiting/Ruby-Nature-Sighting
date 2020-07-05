@@ -1,3 +1,48 @@
 // Place all the styles related to the Static controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.navbar-brand {
+  font-family: bello-caps, sans-serif;
+}
+
+.masthead {
+  height: 100vh; min-height: 500px;
+  background-image: url('forest.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+
+.masthead h1 {
+  text-align: center;
+  font-size: 3.25em;
+  color: white;
+  font-family: bello-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.masthead h1 span {
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 0px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    background: rgba(112,135,58,0.8);
+}
+
+.w3-button {
+  background-color: white; /* Green */
+  border: none;
+  border-radius: 4px;
+  color: #8C9B4E;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 16px;
+  margin: 8px 4px;
+  padding: 4px 20px;
+  cursor: pointer;
+}
