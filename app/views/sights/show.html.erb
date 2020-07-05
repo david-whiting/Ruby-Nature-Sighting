@@ -1,5 +1,17 @@
-<h1><%= @sight.title %></h1>
-<p><%= @sight.content %></p>
+<div class="container">
+
+<!-- Portfolio Item Heading -->
+  <h1 class="my-4"><%= @sight.title %></h1>
+
+  <!-- Portfolio Item Row -->
+  <div class="row">
+    <div class="col-md-8">
+    <img class="img-fluid" <%= image_tag("small_bird.jpg", :alt => "bird photo") %><BR>
+    </div>
+
+    <div class="col-md-4">
+      <h3 class="my-3"><%= @sight.title %> notes</h3>
+      <p><%= @sight.content %></p>
 
 <b>Categories:</b>
 <ul>
@@ -8,13 +20,12 @@
   <% end %>
 </ul>
 
-<h4>Author</h4>
+<b>Author</b>
 <p><%= @sight.user.name %></p>
 
-
 <% if @sight.user == current_user %>
-<%= link_to "Index", "/sights" %>
 <a href="/sights/<%= @sight.id %>/edit">Edit</a><BR>
 <%= button_to "delete", sight_path(:id => @sight), :method => :delete %>
 <% end %>
 
+</div>

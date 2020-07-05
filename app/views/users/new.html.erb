@@ -1,10 +1,11 @@
+<div class="container"><BR>
 <% if @user.errors.any? %>
   <div id="error_explanation">
     <h2>
       <%= pluralize(@user.errors.count, "error") %>
       prohibited this post from being saved:
     </h2>
- 
+
     <ul>
     <% @user.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
@@ -17,7 +18,8 @@
 <h1>Sign up here</h1>
 <%= form_for(@user) do |f| %>
   <%= f.text_field :name, :placeholder => "Name" %>
-  <%= f.text_field :email, :placeholder => "Register with your email" %>
+  <%= f.text_field :email, :placeholder => "Register with email" %>
   <%= f.password_field :password, :placeholder => "Choose a password" %>
   <%= f.submit %>
 <% end %>
+</div>

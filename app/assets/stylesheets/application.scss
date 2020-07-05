@@ -26,3 +26,24 @@
    font-family: bello-caps, sans-serif;
    font-size: 1.5em;
  }
+
+h1 {
+  font-family: bello-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.w7-button {
+  background-color: #A3B85E;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 16px;
+  margin: 8px 4px;
+  padding: 4px 20px;
+  cursor: pointer;
+}
