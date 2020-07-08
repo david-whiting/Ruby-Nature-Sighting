@@ -3,18 +3,15 @@
 <p>Click author to see all by author</p>
 
 <div id="sights">
-<% @sights.each do |sight| %>
-<div class="sight">
-  <%= link_to sight.title, sight_path(sight) %>,
-  posted by: <%= link_to sight.user.name,
-  user_sights_path(sight.user) %>,
-  category:
-    <% ids = sight.category_ids %>
-    <% categories = Category.find(ids) %>
-    <%= categories.map { |category| category.name }.join(', ') %>
-    <% end %>
-  </div>
-</div><BR><BR>
+
+  <% @sights.each do |sight| %>
+    <div class="sight">
+    <%= link_to sight.title, sight_path(sight) %>,
+    posted by: <%= link_to sight.user.name, user_sights_path(sight.user) %>,
+    category: <%= sight.categories.map { |category| category.name }.join(', ') %>
+  <% end %>
+
+</div><BR>
 
 <a href="/sights/new" class="w7-button w7-1">add a sighting</a>
 <a href="/sights" class="w7-button w7-1">full list</a><BR><BR>
