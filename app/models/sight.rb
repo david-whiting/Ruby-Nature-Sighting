@@ -8,6 +8,8 @@ class Sight < ApplicationRecord
   	validates :content, length: { maximum: 500 }
 
   	scope :search_category, -> (category_name) { 
-    joins(sight_cats: :category).where("name LIKE ?", category_name)
+    joins(sight_cats: :category).where("name LIKE ?", "%#{category_name}%")
   }
 end
+
+
