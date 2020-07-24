@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
 	resources :sights
 	resources :categories
+	resources :sight_cats
 	
 	resources :users do
 		resources :sights, only: [:show, :index, :new]

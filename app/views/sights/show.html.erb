@@ -22,6 +22,14 @@
 
 <b>Author</b>
 <p><%= @sight.user.name %></p>
+
+<b>Locations</b>
+<ul style="list-style-type: none; padding: 0; margin: 0;">
+      <% @sight.sight_cats.each do |sight_cat| %>
+        <li><%= sight_cat.location %></li>
+      <% end %>
+    </ul><BR>
+
 <%= link_to "Back", :back%><BR><BR>
 
 <% if @sight.user == current_user %>

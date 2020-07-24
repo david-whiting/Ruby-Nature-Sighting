@@ -21,6 +21,14 @@
   </div>
 
   <div class="field">
+    <%= f.label :sight_cats, :location %><br />
+    <%= f.fields_for :sight_cats, @sight.sight_cats.build do |sight_cats_fields| %>
+    <%= sight_cats_fields.text_field :location %>
+  <% end %>
+  </div>
+  
+
+  <div class="field">
     
     <%= hidden_field_tag "sight[category_ids][]", nil %>
     

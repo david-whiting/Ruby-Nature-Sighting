@@ -55,6 +55,6 @@ class SightsController < ApplicationController
   end
 
 	def sight_params #strong parameters
-	  params.require(:sight).permit(:title, :content, category_ids:[], categories_attributes: [:name])
+	  params.require(:sight).permit(:title, :content, category_ids:[], categories_attributes: [:name], sight_cats_attributes: [:location])
 	end
 end
