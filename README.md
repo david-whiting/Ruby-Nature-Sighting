@@ -18,3 +18,5 @@ Distributed under https://opensource.org/licenses/MIT.<br>
 
 Watch the demo video on YouTube, [here](https://www.youtube.com/watch?v=1-4tuzOSVRE&t=8s).<br>
 
+![](nature-sightings1.gif)
+
