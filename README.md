@@ -14,4 +14,7 @@ Launch http://localhost:3000/ in your browser<br>
 Bug reports and pull requests are welcome at https://github.com/Sara-Harvey/nature-sightings. Contributors are expected to adhere to https://www.contributor-covenant.org/.<br>
 
 <h2>License</h2><br>
-Distributed under https://opensource.org/licenses/MIT.
+Distributed under https://opensource.org/licenses/MIT.<br>
+
+Watch the demo video on YouTube, [here](https://www.youtube.com/watch?v=1-4tuzOSVRE&t=8s).
+
