@@ -8,10 +8,10 @@ To use this app, clone the repo, then execute: $ bundle<br>
 <h2>Usage</h2><br>
 Run rake db:migrate<br>
 Run rails s<br>
-Launch [localhost:3000](http://localhost:3000/) in your browser<br>
+Launch http://localhost:3000/ in your browser<br>
 
 <h2>Contributing</h2><br>
-Bug reports and pull requests are welcome at [Sara-Harvey/nature-sightings](https://github.com/Sara-Harvey/nature-sightings). Contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/).<br>
+Bug reports and pull requests are welcome at https://github.com/Sara-Harvey/nature-sightings. Contributors are expected to adhere to https://www.contributor-covenant.org/.<br>
 
 <h2>License</h2><br>
-Distributed under the [MIT License](https://opensource.org/licenses/MIT).
+Distributed under https://opensource.org/licenses/MIT.
