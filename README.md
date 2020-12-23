@@ -8,8 +8,8 @@ Bootstrap styling, popular Adobe fonts and free use Pexel photos create an attra
 To use this app, clone the repo, then execute: $ bundle<br>
 
 <h2>Usage</h2><br>
-Run `rake db:migrate`<br>
-Run `rails s`<br>
+Run rake db:migrate<br>
+Run rails s<br>
 Launch http://localhost:3000/ in your browser<br>
 
 <h2>Contributing</h2><br>
